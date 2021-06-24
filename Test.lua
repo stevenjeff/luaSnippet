@@ -60,6 +60,14 @@ for i = 1, #a do
     print( a[ i])
 end
 
+-- pair 迭代器
+people = { name = 'Bob', age = 29 }
+for index, value in pairs( people) do
+    print( index)
+    print( value)
+end
+
+
 
 
 
