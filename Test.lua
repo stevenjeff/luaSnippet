@@ -71,6 +71,18 @@ end
 pairs 与 ipairs 的 区别 在于 前者 会 遍历 所有 值 不为 nil 的 索引， 而后 者 只会 从 索引 1 开始 递增 遍历 到 最后 一个 值 不为 nil 的 整数 索引。
 ]]
 
+-- 函数定义
+local square = function (num)
+    return num * num
+end
+
+-- 等效定义
+local function square (num)
+    return num * num
+end
+
+
+
 
 
 
