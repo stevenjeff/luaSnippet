@@ -50,10 +50,16 @@ a[ 2] = 'Jeff'
 a = {'Bob', 'Jeff'}
 print( a[ 1])
 
-for index, value in ipairs( a) do
-    print( index)  -- index 迭代 数组 a 的 索引
+for index, value in ipairs( a) do     -- ipairs 是 Lua 内置 的 函数， 实现 类似 迭代 器 的 功能。
+print( index)  -- index 迭代 数组 a 的 索引
     print( value)  -- value 迭代 数组 a 的 值
 end
+-- 等效写法
+for i = 1, #a do
+    print( i)
+    print( a[ i])
+end
+
 
 
 
