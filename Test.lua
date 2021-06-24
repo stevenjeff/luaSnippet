@@ -18,6 +18,50 @@ print( 1 or 5) -- 1
 print( not 0) -- false
 print('' or 1) -- '' Lua 的 逻辑 操作 符 支持 短路， 也就是说
 print(' hello' .. ' ' .. 'world!') -- 'hello world!'
+print(#' hello') -- 5 获取字符串或者表的长度
+
+if 1==1 then
+    exists = true
+    print(exists)
+else
+    exists = false
+end
+-- for example
+local sum = 0
+for i = 1, 100 do
+    sum = sum + i
+end
+
+-- 表 (键值对) lua的唯一数据结构
+a = {} -- 将 变量 a 赋值 为 一个 空 表
+a['field'] = 'value'  -- 将 field 字段 赋值 value
+print( a. field)  -- 打印 内容 为' value'， a. field 是 a[' field'] 的 语法 糖。
+people = {
+-- 也可以 这样 定义
+    name = 'Bob',
+    age = 29
+}
+print( people. name) -- 打印 的 内容 为' Bob'
+
+a = {}
+a[ 1] = 'Bob'
+a[ 2] = 'Jeff'
+
+a = {'Bob', 'Jeff'}
+print( a[ 1])
+
+for index, value in ipairs( a) do
+    print( index)  -- index 迭代 数组 a 的 索引
+    print( value)  -- value 迭代 数组 a 的 值
+end
+
+
+
+
+
+
+
+
 
 
 
