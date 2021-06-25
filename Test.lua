@@ -81,6 +81,53 @@ local function square (num)
     return num * num
 end
 
+-- 可变参数
+local function square (...)
+    local argv = {...}
+    for i = 1, #argv do
+        argv[ i] = argv[ i] * argv[ i]
+    end
+    return unpack( argv)
+end
+a, b, c = square( 1, 2, 3)
+print( a)
+print( b)
+print( c)
+
+-- string
+local a= "fsfs"
+print(string.len(a))
+print(string.lower(a))
+print(string.sub(a,2,-2))
+-- table 表
+local mytable = {1,2,3,4}
+table.insert(mytable,4,5)
+print(table.concat(mytable,','))
+print(table.remove(mytable,2))
+-- math
+local mathNum = 3.21
+print(math.floor(mathNum))
+math.randomseed(1)
+print(math.random(1,100))
+
+--local person = {
+--  name = 'Bob',
+--  age = 29
+--}
+--require "cjson"
+--require "cmsgpack"
+--local json_people_str = cjson. encode(person)  --使用 cjson 序列 化成 字符串：
+--local msgpack_people_str = cmsgpack. pack( person)  --使用 cmsgpack 序列 化成 字符串：
+--local json_people_obj = cjson. decode( json_people_str) --使用 cjson 将 序列 化 后的 字符串 还原 成表：
+--print( json_people_obj.name)
+----使用 cmsgpack 将 序列 化 后的 字符串 还原 成表：
+--local msgpack_people_obj = cmsgpack. unpack( msgpack_people_str)
+--print( msgpack_people_obj.name)
+
+
+
+
+
 
 
 
